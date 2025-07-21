@@ -18,6 +18,7 @@ namespace ClientBase.Features.Movement
             if (Input.GetKeyInt(KeyCode.LeftControl) && Input.GetKeyDownInt(KeyCode.F))
             {
                 FlyEnabled = !FlyEnabled;
+                PopupUtils.HudMessage("Flight", FlyEnabled ? "Toggled On" : "Toggled Off", 3);
             }
 
             var localPlayer = PlayerUtils.LocalPlayer();
@@ -60,7 +61,7 @@ namespace ClientBase.Features.Movement
             if (cameraTransform == null)
                 return;
 
-            float speed = Input.GetKey(KeyCode.LeftShift) ? FlySpeed + 0.007142857f : FlySpeed;
+            float speed = Input.GetKey(KeyCode.LeftShift) ? FlySpeed + 5f : FlySpeed;
             Vector3 movement = Vector3.zero;
 
             if (Input.GetKey(KeyCode.Q)) movement += -cameraTransform.up * speed;
