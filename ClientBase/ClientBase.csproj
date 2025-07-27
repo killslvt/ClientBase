@@ -426,6 +426,8 @@
     <Compile Include="SDK\PlayerUtils.cs" />
     <Compile Include="SDK\PopupUtils.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="ClientBase.rar" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
