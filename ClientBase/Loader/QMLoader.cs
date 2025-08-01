@@ -43,8 +43,12 @@ namespace ClientBase.Loader
             Logging.Log("Loading Quick Menu buttons...", LType.Info);
 
             var qmTab = new QMTabMenu("ClientBase", "ClientBase Tab Menu", null);
+
             var movementMenu = new QMNestedMenu(qmTab, 1, 0, "Movement", "Movement Features", "Movement Features Menu", true);
             Menus.MovementMenu.Init(movementMenu);
+
+            var exploitsMenu = new QMNestedMenu(qmTab, 2, 0, "Exploits", "Exploit Features", "Exploits Features menu", true);
+            Menus.ExploitsMenu.Init(exploitsMenu);
 
             Logging.Log("Quick Menu buttons loaded!", LType.Success);
         }

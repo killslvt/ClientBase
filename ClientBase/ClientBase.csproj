@@ -59,6 +59,10 @@
     <Reference Include="MelonLoader">
       <HintPath>..\Refs\MelonLoader.dll</HintPath>
     </Reference>
+    <Reference Include="Photon-DotNet, Version=4.1.8.3, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Refs\Managed\Photon-DotNet.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -414,8 +418,10 @@
     <Compile Include="ButtonAPI\QMSingleButton.cs" />
     <Compile Include="ButtonAPI\QMTabMenu.cs" />
     <Compile Include="ButtonAPI\QMToggleButton.cs" />
+    <Compile Include="Features\Exploits\ChatboxLagger.cs" />
     <Compile Include="Features\Movement\Flight.cs" />
     <Compile Include="Features\Movement\SpeedHack.cs" />
+    <Compile Include="Loader\Menus\ExploitsMenu.cs" />
     <Compile Include="Loader\Menus\MovementMenu.cs" />
     <Compile Include="Loader\QMLoader.cs" />
     <Compile Include="Loader\SpriteManager.cs" />
@@ -423,8 +429,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SDK\Logging.cs" />
     <Compile Include="SDK\Patching\Patch.cs" />
+    <Compile Include="SDK\PhotonUtils.cs" />
     <Compile Include="SDK\PlayerUtils.cs" />
     <Compile Include="SDK\PopupUtils.cs" />
+    <Compile Include="SDK\SerializationUtils.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClientBase.rar" />

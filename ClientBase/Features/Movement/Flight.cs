@@ -61,9 +61,12 @@ namespace ClientBase.Features.Movement
             if (cameraTransform == null)
                 return;
 
-            float speed = Input.GetKey(KeyCode.LeftShift) ? FlySpeed + 5f : FlySpeed;
-            Vector3 movement = Vector3.zero;
+            float speed = FlySpeed;
 
+            if (Input.GetKeyDown(KeyCode.LeftShift)) FlySpeed *= 2f;
+            if (Input.GetKeyUp(KeyCode.LeftShift)) FlySpeed /= 2f;
+
+            Vector3 movement = Vector3.zero;
             if (Input.GetKey(KeyCode.Q)) movement += -cameraTransform.up * speed;
             if (Input.GetKey(KeyCode.E)) movement += cameraTransform.up * speed;
             if (Input.GetKey(KeyCode.A)) movement += -cameraTransform.right * speed;
