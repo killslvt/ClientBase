@@ -1,10 +1,8 @@
-﻿using System.Reflection;
-using System.Runtime.CompilerServices;
+﻿using MelonLoader;
+using System;
+using System.Reflection;
 using System.Runtime.InteropServices;
 
-// General Information about an assembly is controlled through the following
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
 [assembly: AssemblyTitle("ClientBase")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
@@ -13,21 +11,11 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCopyright("Copyright ©  2025")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-
-// Setting ComVisible to false makes the types in this assembly not visible
-// to COM components.  If you need to access a type in this assembly from
-// COM, set the ComVisible attribute to true on that type.
 [assembly: ComVisible(false)]
-
-// The following GUID is for the ID of the typelib if this project is exposed to COM
 [assembly: Guid("0029f398-3a31-4346-887d-30342b65350d")]
-
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version
-//      Build Number
-//      Revision
-//
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
+
+[assembly: MelonInfo(typeof(ClientBase.Main), "ClientBase", "1.0.0", "mhmswiss | https://discord.gg/Js5HJaWX2S")]
+[assembly: MelonGame("VRChat", "VRChat")]
+[assembly: MelonColor(ConsoleColor.Blue)]

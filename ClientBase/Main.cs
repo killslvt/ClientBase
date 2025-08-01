@@ -7,10 +7,6 @@ using ClientBase.Features.Movement;
 using ClientBase.SDK;
 using System.Threading.Tasks;
 
-[assembly: MelonInfo(typeof(ClientBase.Main), "ClientBase", "1.0.0", "mhmswiss")]
-[assembly: MelonGame("VRChat", "VRChat")]
-[assembly: MelonColor(ConsoleColor.Blue)]
-
 namespace ClientBase
 {
     //This is just a base for anyone wanting to make a client
