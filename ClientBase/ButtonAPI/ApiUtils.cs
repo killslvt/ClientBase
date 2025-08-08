@@ -9,7 +9,6 @@ namespace ClientBase.ButtonAPI
         public const string Identifier = "ClientBase";
 
         private static QuickMenu _quickMenu;
-        private static MainMenu _socialMenu;
         private static GameObject _selectedUserPageGrid;
         private static GameObject _qmMenuTemplate;
         private static GameObject _qmTabTemplate;
@@ -21,8 +20,6 @@ namespace ClientBase.ButtonAPI
         public static readonly System.Random random = new System.Random();
 
         public static QuickMenu QuickMenu => _quickMenu = Resources.FindObjectsOfTypeAll<QuickMenu>().FirstOrDefault();
-
-        public static MainMenu MainMenu => _socialMenu = Resources.FindObjectsOfTypeAll<MainMenu>().FirstOrDefault();
 
         public static GameObject GetSelectedUserPageGrid()
         {
@@ -58,33 +55,6 @@ namespace ClientBase.ButtonAPI
                 _qmButtonTemplate = QuickMenu.transform.Find("CanvasGroup/Container/Window/QMParent/Menu_Here/ScrollRect/Viewport/VerticalLayoutGroup/Buttons_WorldActions/Button_RejoinWorld")?.gameObject;
             }
             return _qmButtonTemplate;
-        }
-
-        public static GameObject GetMMTabButtonTemplate()
-        {
-            if (_mmTabTemplate == null && MainMenu != null)
-            {
-                _mmTabTemplate = MainMenu.transform.Find("Container/PageButtons/HorizontalLayoutGroup/Marketplace_Button_Tab")?.gameObject;
-            }
-            return _mmTabTemplate;
-        }
-
-        public static GameObject GetMMenuTemplate()
-        {
-            if (_mmMenuTemplate == null && MainMenu != null)
-            {
-                _mmMenuTemplate = MainMenu.transform.Find("Container/MMParent/HeaderOffset/Menu_Dashboard")?.gameObject;
-            }
-            return _mmMenuTemplate;
-        }
-
-        public static GameObject GetMMButtonTemplate()
-        {
-            if (_mmButtonTemplate == null && MainMenu != null)
-            {
-                _mmButtonTemplate = MainMenu.transform.Find("Container/MMParent/HeaderOffset/Menu_MM_WorldInformation/Panel_World_Information/Content/Viewport/BodyContainer_World_Details/ScrollRect/Viewport/VerticalLayoutGroup/Actions/NewInstance")?.gameObject;
-            }
-            return _mmButtonTemplate;
         }
 
         public static Sprite OnIconSprite()
