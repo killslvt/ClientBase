@@ -31,7 +31,7 @@ namespace ClientBase.SDK.Patching
             try
             {
                 DoPatch(
-                    typeof(NetworkManager).GetMethod("Method_Public_Void_Player_PDM_1"),
+                    typeof(NetworkManager).GetMethod(nameof(NetworkManager.Method_Public_Void_Player_PDM_2)),
                     GetPatchMethod(nameof(OnPlayerJoinPatch))
                 );
                 Logging.Log("OnPlayerJoin patch applied successfully.", LType.Success);
@@ -44,7 +44,7 @@ namespace ClientBase.SDK.Patching
             try
             {
                 DoPatch(
-                    typeof(NetworkManager).GetMethod("Method_Public_Void_Player_0"),
+                    typeof(NetworkManager).GetMethod(nameof(NetworkManager.Method_Public_Void_Player_0)),
                     GetPatchMethod(nameof(OnPlayerLeavePatch))
                 );
                 Logging.Log("OnPlayerLeave patch applied successfully.", LType.Success);
